@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">Aditya.</a>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#Skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact Me</a>
+        </nav>
+        <i class='bx bx-menu' id="menu"></i>
+    </header>
+    <section class="home" id="home">
+
+        <div class="text-content">
+            <h2>Aditya Garg</h2>
+            <h5>WEBSITE DEVELOPER</h5>
+            <div class="social-media">
+                <a href="https://www.linkedin.com/in/aditya-garg-408298249/"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/AG-444"><i class='bx bxl-github'></i></a>
+                <a href="https://www.instagram.com/aditya444garg/"><i class='bx bxl-instagram'></i></a>
+            </div>
+            <button class="btn">Downlaod Resume</button>
+        </div>
+        <div class="cover">
+            <div class="image"></div>
+            <div class="layout"></div>
+        </div>
+    </section>
+    <section class="about" id="about">
+        <div class="image-cover">
+
+            <div class="img">
+                <h2>Aditya Garg</h2>
+                <h5>WEBSITE DEVELOPER</h5>
+                <img src="profile.png" alt="">
+            </div>
+        </div>
+        <div class="about-text">
+            <h3 class="title"><i class='bx bx-user'></i>ABOUT ME</h3>
+            <p> I am currently a Second-year student pursuing a B.Tech degree in Computer Science 
+                and Engineering at VIT, Vellore. I am currently expanding my knowledge and skills 
+                by expanding my knowledge into web development and exploring different areas such as AI/ML to 
+                enhance my expertise</p>
+            <div class="social-media">
+                <a href="https://www.linkedin.com/in/aditya-garg-408298249/"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/AG-444"><i class='bx bxl-github'></i></a>
+                <a href="https://www.instagram.com/aditya444garg/"><i class='bx bxl-instagram'></i></a>
+            </div>
+        </div>
+    </section>
+    <section class="Skills" id="Skills">
+        <h3 class="title"><i class='bx bx-user'></i>SKILLS</h3>
+        <div class="skill-container">
+            <div class="skills-content">
+                <i class='bx bx-code-alt'></i>
+                <h5>Software Developer</h5>
+                <p>Python,C,C++,<br>JAVA,HTML,CS,<br>JAVASCRIPT</p>
+            </div>
+            <div class="skills-content">
+                <i class='bx bxs-briefcase-alt-2'></i>
+                <h5>Outreach Manager</h5>
+                <p>-Find Sponsorships
+                    <br>-Connect With Workshop Speakers
+                    <br>-Manage relationships with Sponsors
+                </p>
+            </div>
+            <div class="skills-content">
+                <i class='bx bx-book-open'></i>
+                <h5>Content Writer</h5>
+                <p>-Creative Writing Blog<br>-Writing content for Research Papers</p>
+            </div>
+        </div>
+    </section>
+    <section class="education" id="education">
+        <h3 class="title"><i class='bx bx-book-open'></i>EDUCATION</h3>
+        <div class="row">
+            <div class="column">
+                <div class="education-content">
+                    <div class="year"><i class='bx bx-time'></i>2018-2020</div>
+                    <h2>The Heritage School</h2>
+                    <p>Secondary Junior Education (Class 9-10) <br> Grade point: 9.4</p>
+                </div>
+                <div class="education-content">
+                    <div class="year"><i class='bx bx-time'></i>2020-2022</div>
+                    <h2>The Heritage School</h2>
+                    <p>Secondary Senior Education (Class 11-12) <br> Grade point: 8.5</p>
+                </div>
+                <div class="education-content">
+                    <div class="year"><i class='bx bx-time'></i>2022-Current</div>
+                    <h2>Vellore Institute of Technology</h2>
+                    <p>Tachelor of Technology (Currently 2nd Year) <br> CGPA : 8.91</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <h2 class="title"><i class='bx bx-headphone'></i>CONTACT ME</h2>
+        <form action="#" id="">
+            <div class="input-box">
+                <input type="text" required placeholder="Full Name">
+                <input type="email" required placeholder="Email">
+            </div>
+            <div class="input-box">
+                <input type="tel" required placeholder="Mobile Number">
+                <input type="email" required placeholder="Subject For">
+            </div>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Message" required></textarea>
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+    </section>
+    <footer>
+        <div class="text">
+            <p>Made by Aditya Garg, 22BCE2128</p>
+        </div>
+       <a href="#"> <i class='bx bx-up-arrow-alt'></i></a>
+    </footer>
+    <script>
+        const menubar = document.querySelector('#menu');
+        const Navbar = document.querySelector('.navbar');
+        menubar.onclick=()=>{
+            menubar.classList.toggle('bx-x');
+            Navbar.classList.toggle('active')
+        }
+        const section=document.querySelectorAll('section');
+        const navlink = document.querySelectorAll('header nav a')
+        window.onscroll = ()=>{
+            section.forEach(sec=>{
+            let top = window.scrollY;
+            let offset = sec.offsetTop - 150;
+            let height = sec.offsetHeight;
+            let id = sec.getAttribute('id')
+            if(top>offset && top < offset + height){
+                sec.classList.add('start-animation');
+                navlink.forEach(links=>{
+                    links.classList.remove('active')
+                    document.querySelector('header nav a[href*='+id+']').classList.add('active')
+                })
+            }
+            })
+            var header = document.querySelector('.header');
+            header.classList.toggle('sticky',window.scrollY>100)
+            menubar.classList.remove('bx-x');
+            Navbar.classList.remove('active')
+        }
+    </script>
+</body>
+
+</html>
